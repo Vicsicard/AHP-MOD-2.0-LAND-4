@@ -1383,21 +1383,56 @@
   
 
   
-  <!-- Call to Action -->
-  <section id="signup" class="py-24 px-6 relative overflow-hidden">
+  <!-- Installation Guide Section -->
+  <section id="install" class="py-24 px-6 relative overflow-hidden">
     <div class="animated-bg absolute inset-0 opacity-70"></div>
     
     <div class="max-w-4xl mx-auto relative z-10 text-center">
-      <h2 class="text-4xl md:text-5xl font-bold mb-8" data-aos="fade-up">Start Tracking AI Bots Today</h2>
-      <p class="text-xl text-gray-light mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">Join 100+ forward-thinking companies already using AHP Mod 2.0 to optimize their AI visibility.</p>
+      <div class="inline-block bg-primary/20 text-primary-light px-4 py-2 rounded-full font-semibold mb-6" data-aos="fade-up">GET STARTED IN MINUTES</div>
+      <h2 class="text-4xl md:text-5xl font-bold mb-8" data-aos="fade-up">Install AHP on Your Website</h2>
+      <p class="text-xl text-gray-light mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">Follow these simple steps to make your website AI-ready and start benefiting from enhanced visibility.</p>
       
-      <form class="max-w-lg mx-auto" data-aos="fade-up" data-aos-delay="200">
-        <div class="flex flex-col md:flex-row gap-4 mb-8">
-          <input type="email" placeholder="Enter your email" class="flex-1 bg-dark-light border border-primary/30 text-white px-6 py-4 rounded-lg focus:outline-none focus:border-primary">
-          <button type="submit" class="bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-lg font-bold hover:shadow-lg hover:shadow-primary/30 transition">Get Started</button>
+      <div class="grid md:grid-cols-3 gap-8 mb-16" data-aos="fade-up" data-aos-delay="200">
+        <!-- Step 1 -->
+        <div class="bg-dark-light p-8 rounded-xl border border-primary/30 relative">
+          <div class="absolute -top-4 -left-4 w-12 h-12 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center text-2xl font-bold">1</div>
+          <h3 class="text-xl font-bold mb-4 text-primary-light">Add the AHP script to your website</h3>
+          <p class="text-gray-light">Copy and paste this code snippet into the <code>&lt;head&gt;</code> section of your website:</p>
         </div>
-        <p class="text-sm text-gray-light">No credit card required. Start with a 14-day free trial.</p>
-      </form>
+        
+        <!-- Step 2 -->
+        <div class="bg-dark-light p-8 rounded-xl border border-primary/30 relative">
+          <div class="absolute -top-4 -left-4 w-12 h-12 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center text-2xl font-bold">2</div>
+          <h3 class="text-xl font-bold mb-4 text-primary-light">Complete the registration</h3>
+          <p class="text-gray-light">After installation, a popup will appear asking for your name and email. Simply fill in these details to complete the registration - no separate account creation needed.</p>
+        </div>
+        
+        <!-- Step 3 -->
+        <div class="bg-dark-light p-8 rounded-xl border border-primary/30 relative">
+          <div class="absolute -top-4 -left-4 w-12 h-12 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center text-2xl font-bold">3</div>
+          <h3 class="text-xl font-bold mb-4 text-primary-light">Start receiving weekly reports</h3>
+          <p class="text-gray-light">That's it! You'll automatically begin receiving free weekly AI visibility reports with actionable insights for your website.</p>
+        </div>
+      </div>
+      
+      <!-- Code Snippet Box -->
+      <div class="bg-dark-light rounded-xl border border-primary/30 overflow-hidden max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="300">
+        <div class="flex justify-between items-center bg-dark p-4 border-b border-primary/30">
+          <div class="text-primary-light font-bold">AHP Installation Code</div>
+          <button id="copy-code-btn" class="bg-primary/20 hover:bg-primary/30 text-primary-light px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            Copy
+          </button>
+        </div>
+        <div class="p-6 bg-[#1a1a2e] text-left overflow-x-auto">
+          <pre id="installation-code" class="text-gray-light"><span class="text-blue-400">&lt;script</span> <span class="text-green-400">src=</span><span class="text-amber-400">"https://cdn.aihandshake.org/module/v2.0/module.js"</span> <span class="text-green-400">data-auto-init=</span><span class="text-amber-400">"true"</span><span class="text-blue-400">&gt;&lt;/script&gt;</span>
+
+<span class="text-gray-500">// That's it! Your website is now AI-ready.</span></pre>
+        </div>
+      </div>
     </div>
   </section>
   
@@ -1454,7 +1489,7 @@
   
   <!-- Sticky CTA Button -->
   <div class="sticky-cta">
-    <a href="#signup" class="bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-full shadow-lg hover:shadow-primary/50 transition">🚀 Start Tracking AI</a>
+    <a href="#install" class="bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-full shadow-lg hover:shadow-primary/50 transition">🚀 Install AHP Mod 2.0</a>
   </div>
 
   <!-- AOS Init -->
@@ -1474,6 +1509,24 @@
       typeSpeed: 40,
       backSpeed: 20,
       loop: true
+    });
+    
+    // Copy code functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const copyBtn = document.getElementById('copy-code-btn');
+      const codeElement = document.getElementById('installation-code');
+      
+      if (copyBtn && codeElement) {
+        copyBtn.addEventListener('click', function() {
+          const code = '<script src="https://cdn.aihandshake.org/module/v2.0/module.js" data-auto-init="true"><\/script>';
+          navigator.clipboard.writeText(code).then(function() {
+            copyBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Copied!';
+            setTimeout(function() {
+              copyBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg> Copy';
+            }, 2000);
+          });
+        });
+      }
     });
   </script>
   

@@ -1,0 +1,1549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AHP Mod 2.0 – Make Your Website Visible to AI Systems</title>
+  <meta name="description" content="AHP Mod 2.0 - Make your website fully visible to AI systems with our comprehensive AI visibility solution and weekly AI engagement reports.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#8b5cf6',
+            'primary-light': '#a78bfa',
+            'primary-dark': '#7c3aed',
+            secondary: '#10b981',
+            'secondary-light': '#34d399',
+            accent: '#f59e0b',
+            'accent-light': '#fbbf24',
+            dark: '#0f172a',
+            'dark-light': '#1e293b',
+            'gray-dark': '#4b5563',
+            gray: '#9ca3af',
+            'gray-light': '#e5e7eb',
+            light: '#f9fafb'
+          },
+          fontFamily: {
+            inter: ['Inter', 'sans-serif'],
+            montserrat: ['Montserrat', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: #0f172a; }
+    h1, h2, h3, h4, h5 { font-family: 'Montserrat', sans-serif; }
+    
+    .animated-bg {
+      background: linear-gradient(135deg, #8b5cf6, #7c3aed, #10b981);
+      background-size: 400% 400%;
+      animation: gradientFlow 12s ease infinite;
+    }
+    
+    @keyframes gradientFlow {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+    
+    .pulse-glow {
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.7); }
+      70% { box-shadow: 0 0 0 15px rgba(139, 92, 246, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0); }
+    }
+    
+    .float-animation {
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0px); }
+    }
+    
+    .typed-text {
+      display: inline;
+      border-right: 2px solid #fff;
+      animation: blink 0.7s steps(1) infinite;
+    }
+    
+    @keyframes blink {
+      0%, 100% { border-color: transparent; }
+      50% { border-color: white; }
+    }
+    
+    .glow-text {
+      text-shadow: 0 0 10px rgba(139, 92, 246, 0.7);
+    }
+    
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+    
+    .gradient-text {
+      background: linear-gradient(135deg, #a78bfa, #10b981);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .gradient-border {
+      position: relative;
+      border-radius: 0.5rem;
+    }
+    
+    .gradient-border::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 0.5rem;
+      padding: 2px;
+      background: linear-gradient(135deg, #8b5cf6, #10b981);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+    
+    .blur-bg {
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+    
+    /* Animated data lines */
+    .data-line {
+      height: 2px;
+      background: linear-gradient(90deg, rgba(139, 92, 246, 0), rgba(139, 92, 246, 1), rgba(139, 92, 246, 0));
+      width: 100%;
+      position: absolute;
+      animation: dataFlow 3s linear infinite;
+      opacity: 0.5;
+    }
+    
+    @keyframes dataFlow {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+    
+    /* Scroll indicator */
+    .scroll-indicator {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 30px;
+      height: 50px;
+      border: 2px solid white;
+      border-radius: 15px;
+    }
+    
+    .scroll-indicator::before {
+      content: '';
+      position: absolute;
+      top: 8px;
+      left: 50%;
+      width: 6px;
+      height: 6px;
+      margin-left: -3px;
+      background-color: white;
+      border-radius: 50%;
+      animation: scrollDown 2s infinite;
+    }
+    
+    @keyframes scrollDown {
+      0% { transform: translateY(0); opacity: 1; }
+      80% { transform: translateY(20px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 0; }
+    }
+
+    .sticky-cta {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+    }
+
+    .feature-card {
+      transition: all 0.4s ease;
+      border: 1px solid rgba(139, 92, 246, 0.1);
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 30px rgba(139, 92, 246, 0.4);
+      border-color: rgba(139, 92, 246, 0.5);
+    }
+
+    .pricing-card {
+      transition: all 0.3s ease;
+    }
+    
+    .pricing-card:hover {
+      transform: scale(1.03);
+    }
+
+    /* View toggle styles */
+    .view-toggle {
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(139, 92, 246, 0.3);
+      border-radius: 30px;
+      padding: 4px;
+      display: inline-flex;
+      position: relative;
+    }
+    
+    .toggle-option {
+      padding: 8px 16px;
+      border-radius: 24px;
+      font-weight: 600;
+      cursor: pointer;
+      position: relative;
+      z-index: 1;
+      transition: color 0.3s ease;
+    }
+    
+    .toggle-slider {
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      height: calc(100% - 8px);
+      width: calc(50% - 4px);
+      background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+      border-radius: 24px;
+      transition: transform 0.3s ease;
+    }
+    
+    .view-toggle.ai-active .toggle-slider {
+      transform: translateX(100%);
+    }
+    
+    /* Human view vs AI view styles */
+    .view-container {
+      position: relative;
+    }
+    
+    .human-view, .ai-view {
+      transition: opacity 0.5s ease;
+    }
+    
+    .ai-view {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      pointer-events: none;
+    }
+    
+    .ai-active .human-view {
+      opacity: 0.3;
+      filter: grayscale(70%);
+    }
+    
+    .ai-active .ai-view {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    
+    /* AI View Highlights */
+    .ai-highlight {
+      position: relative;
+    }
+    
+    .ai-highlight-marker {
+      position: absolute;
+      border: 2px solid #10b981;
+      border-radius: 4px;
+      background: rgba(16, 185, 129, 0.1);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      pointer-events: none;
+      z-index: 10;
+    }
+    
+    .ai-active .ai-highlight-marker {
+      opacity: 1;
+    }
+    
+    .ai-score {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background: #10b981;
+      color: white;
+      border-radius: 12px;
+      padding: 2px 8px;
+      font-size: 12px;
+      font-weight: bold;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      pointer-events: none;
+    }
+    
+    .ai-active .ai-score {
+      opacity: 1;
+    }
+    
+    .ai-metadata {
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid #10b981;
+      border-radius: 4px;
+      padding: 8px 12px;
+      font-family: monospace;
+      font-size: 12px;
+      color: #10b981;
+      max-width: 300px;
+      position: absolute;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      pointer-events: none;
+      z-index: 20;
+    }
+    
+    .ai-active .ai-metadata {
+      opacity: 1;
+    }
+    
+    .ai-ignored {
+      position: relative;
+    }
+    
+    .ai-ignored::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(244, 63, 94, 0.1);
+      border: 1px dashed rgba(244, 63, 94, 0.5);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      pointer-events: none;
+      z-index: 5;
+    }
+    
+    .ai-active .ai-ignored::after {
+      opacity: 1;
+    }
+    
+    /* Feature Cards */
+    .feature-card {
+      transition: all 0.3s ease;
+      border: 1px solid rgba(138, 75, 255, 0.1);
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px -5px rgba(138, 75, 255, 0.2);
+      border-color: rgba(138, 75, 255, 0.3);
+    }
+    
+    /* Pricing Cards */
+    .pricing-card {
+      transition: all 0.3s ease;
+    }
+    
+    .pricing-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px -10px rgba(138, 75, 255, 0.25);
+    }
+    
+    /* Sticky CTA */
+    .sticky-cta {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 100;
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(138, 75, 255, 0.4);
+      }
+      70% {
+        box-shadow: 0 0 0 10px rgba(138, 75, 255, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(138, 75, 255, 0);
+      }
+    }
+    
+    /* Over-the-top UI effects */
+    .text-glow {
+      text-shadow: 0 0 10px rgba(138, 75, 255, 0.7), 0 0 20px rgba(138, 75, 255, 0.5), 0 0 30px rgba(138, 75, 255, 0.3);
+    }
+    
+    .shadow-glow {
+      box-shadow: 0 0 15px rgba(138, 75, 255, 0.5), 0 0 30px rgba(138, 75, 255, 0.3);
+    }
+    
+    .mega-gradient-text {
+      background: linear-gradient(to right, #8b5cf6, #10b981, #f59e0b);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shine 3s linear infinite;
+    }
+    
+    .mega-gradient-text-alt {
+      background: linear-gradient(to right, #10b981, #f59e0b, #8b5cf6);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shine 3s linear infinite;
+    }
+    
+    @keyframes shine {
+      to {
+        background-position: 200% center;
+      }
+    }
+    
+    .animate-pulse-subtle {
+      animation: pulse-subtle 2s infinite;
+    }
+    
+    @keyframes pulse-subtle {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.8;
+      }
+    }
+    
+    .animate-pulse-slow {
+      animation: pulse-slow 3s infinite;
+    }
+    
+    @keyframes pulse-slow {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+    }
+    
+    .animate-spin-slow {
+      animation: spin 8s linear infinite;
+    }
+    
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    
+    /* Floating 3D elements */
+    .floating-cube {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, rgba(138, 75, 255, 0.5), rgba(16, 185, 129, 0.5));
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      transform-style: preserve-3d;
+      animation: float 6s ease-in-out infinite, rotate3d 12s linear infinite;
+    }
+    
+    .floating-sphere {
+      width: 100px;
+      height: 100px;
+      background: radial-gradient(circle at 30% 30%, rgba(245, 158, 11, 0.5), rgba(138, 75, 255, 0.5));
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      animation: float 8s ease-in-out infinite reverse;
+    }
+    
+    .floating-pyramid {
+      width: 0;
+      height: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-bottom: 86px solid rgba(16, 185, 129, 0.5);
+      animation: float 7s ease-in-out infinite, rotate3d 15s linear infinite;
+    }
+    
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+    
+    @keyframes rotate3d {
+      0% {
+        transform: rotate3d(1, 1, 1, 0deg);
+      }
+      100% {
+        transform: rotate3d(1, 1, 1, 360deg);
+      }
+    }
+    
+    /* Binary code rain */
+    .binary-rain {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Ctext x='10' y='20' fill='rgba(138, 75, 255, 0.3)' font-family='monospace' font-size='10'%3E01101%3C/text%3E%3Ctext x='50' y='30' fill='rgba(16, 185, 129, 0.3)' font-family='monospace' font-size='10'%3E10011%3C/text%3E%3Ctext x='30' y='50' fill='rgba(245, 158, 11, 0.3)' font-family='monospace' font-size='10'%3E11001%3C/text%3E%3Ctext x='70' y='70' fill='rgba(138, 75, 255, 0.3)' font-family='monospace' font-size='10'%3E01010%3C/text%3E%3Ctext x='10' y='90' fill='rgba(16, 185, 129, 0.3)' font-family='monospace' font-size='10'%3E10110%3C/text%3E%3C/svg%3E");
+      animation: rain 20s linear infinite;
+    }
+    
+    @keyframes rain {
+      from {
+        background-position: 0 0;
+      }
+      to {
+        background-position: 0 1000px;
+      }
+    }
+    
+    /* Enhanced buttons */
+    .mega-btn-primary {
+      display: inline-block;
+      background: linear-gradient(to right, #8b5cf6, #7c3aed);
+      color: white;
+      font-weight: bold;
+      padding: 1rem 2rem;
+      border-radius: 0.5rem;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 4px 20px rgba(123, 58, 237, 0.5);
+    }
+    
+    .mega-btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(123, 58, 237, 0.6);
+    }
+    
+    .mega-btn-primary::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transform: rotate(30deg);
+      transition: all 0.5s ease;
+    }
+    
+    .mega-btn-primary:hover::after {
+      transform: rotate(30deg) translate(50%, 50%);
+    }
+    
+    .mega-btn-secondary {
+      display: inline-block;
+      background: rgba(16, 185, 129, 0.1);
+      color: white;
+      font-weight: bold;
+      padding: 1rem 2rem;
+      border-radius: 0.5rem;
+      border: 1px solid #10b981;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+    }
+    
+    .mega-btn-secondary:hover {
+      background: rgba(16, 185, 129, 0.2);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+    }
+    
+    /* Enhanced toggle switch */
+    .view-toggle {
+      position: relative;
+      display: flex;
+      width: 300px;
+      height: 50px;
+      border-radius: 25px;
+      background-color: rgba(30, 30, 40, 0.7);
+      border: 1px solid rgba(138, 75, 255, 0.5);
+      overflow: hidden;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(138, 75, 255, 0.3);
+    }
+    
+    .toggle-slider {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      width: calc(50% - 10px);
+      height: calc(100% - 10px);
+      border-radius: 20px;
+      background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+      transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      box-shadow: 0 0 10px rgba(138, 75, 255, 0.5);
+    }
+    
+    .ai-active .toggle-slider {
+      transform: translateX(calc(100% + 10px));
+      background: linear-gradient(135deg, #10b981, #059669);
+    }
+    
+    .toggle-option {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      z-index: 1;
+      transition: all 0.3s ease;
+    }
+    
+    .human-option {
+      color: white;
+    }
+    
+    .ai-option {
+      color: rgba(255, 255, 255, 0.6);
+    }
+    
+    .ai-active .human-option {
+      color: rgba(255, 255, 255, 0.6);
+    }
+    
+    .ai-active .ai-option {
+      color: white;
+    }
+    
+    /* Enhanced highlight text */
+    .highlight-text {
+      position: relative;
+      color: white;
+      font-weight: bold;
+      padding: 0 2px;
+      background: linear-gradient(to right, rgba(138, 75, 255, 0.2), rgba(16, 185, 129, 0.2));
+      border-radius: 3px;
+    }
+    
+    .ai-label {
+      display: inline-block;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 600;
+      margin-right: 4px;
+    }
+    
+    .ai-label-high {
+      background: #10b981;
+      color: white;
+    }
+    
+    .ai-label-medium {
+      background: #f59e0b;
+      color: white;
+    }
+    
+    .ai-label-low {
+      background: #f43f5e;
+      color: white;
+    }
+  </style>
+</head>
+<body class="text-white">
+  <!-- Sticky Navbar -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-dark/80 backdrop-blur-lg px-6 py-4 flex justify-between items-center border-b border-primary/30">
+    <div class="flex items-center">
+      <span class="font-bold text-xl text-primary-light">AHP <span class="gradient-text text-glow">MOD 2.0</span></span>
+    </div>
+    
+    <div class="hidden md:flex items-center space-x-8">
+      <a href="#features" class="text-gray-light hover:text-white hover:text-glow transition duration-300 transform hover:scale-105">Features</a>
+      <a href="#dashboard" class="text-gray-light hover:text-white hover:text-glow transition duration-300 transform hover:scale-105">Dashboard</a>
+      <a href="#pricing" class="text-gray-light hover:text-white hover:text-glow transition duration-300 transform hover:scale-105">Pricing</a>
+    </div>
+    
+    <a href="#signup" class="bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl hover:shadow-primary/50 transition transform hover:scale-110 border border-white/10">Track AI Now</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
+    <!-- Animated Background Effects -->
+    <div class="animated-bg absolute inset-0 opacity-80"></div>
+    <div class="data-lines absolute inset-0"></div>
+    
+    <!-- Floating 3D Elements -->
+    <div class="floating-cube absolute top-1/4 left-10 hidden lg:block" data-aos="fade-right" data-aos-delay="800"></div>
+    <div class="floating-sphere absolute bottom-1/4 right-10 hidden lg:block" data-aos="fade-left" data-aos-delay="1000"></div>
+    <div class="floating-pyramid absolute top-1/3 right-1/4 hidden lg:block" data-aos="fade-down" data-aos-delay="1200"></div>
+    
+    <!-- Binary Code Rain Effect -->
+    <div class="binary-rain absolute inset-0 opacity-20 pointer-events-none"></div>
+    
+    <!-- Main Content -->
+    <div class="max-w-6xl mx-auto text-center relative z-10">
+      <!-- Attention Badge -->
+      <div class="mb-8" data-aos="zoom-in">
+        <span class="inline-block animate-pulse-slow bg-gradient-to-r from-primary to-secondary px-6 py-3 rounded-full border border-white/30 backdrop-blur-md shadow-glow">
+          <span class="text-lg font-bold text-white flex items-center gap-2">
+            <span class="text-2xl">⚠️</span> AI VISIBILITY SOLUTION <span class="text-2xl">⚠️</span>
+          </span>
+        </span>
+      </div>
+      
+      <!-- Main Headline -->
+      <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold mb-8 leading-tight" data-aos="fade-up" data-aos-delay="100">
+        <span class="text-white">Make Your</span><br>
+        <span class="text-white">Website</span><br>
+        <span class="mega-gradient-text text-glow" style="color: #9d7bff;">Visible to AI</span><br>
+        <span class="text-white">Systems</span>
+      </h1>
+      
+      <!-- Static Subtitle (Replacing Typewriter) -->
+      <div class="mb-10" data-aos="fade-up" data-aos-delay="200">
+        <div class="static-tagline">
+          <span class="text-2xl md:text-4xl font-bold gradient-text-alt">Optimize Your Content For AI Understanding</span>
+        </div>
+      </div>
+      
+      <!-- Clear Value Proposition -->
+      <div class="bg-dark-light/40 backdrop-blur-md rounded-xl p-6 mb-10 border border-primary/30 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="300">
+        <p class="text-xl text-white leading-relaxed">
+          <span class="font-bold text-2xl text-primary-light">CHALLENGE:</span> <span class="highlight-text">AI systems can't see your website the way humans do.</span>
+        </p>
+        <div class="h-px bg-gradient-to-r from-transparent via-primary-light to-transparent my-4"></div>
+        <p class="text-xl text-white leading-relaxed">
+          <span class="font-bold text-2xl text-secondary-light">SOLUTION:</span> AHP Mod 2.0 makes your website <span class="text-white font-bold underline decoration-secondary">fully visible to AI systems</span> and provides weekly reports on AI engagement.
+        </p>
+      </div>
+      
+      <!-- CTA Buttons -->
+      <div class="flex flex-col md:flex-row gap-6 justify-center" data-aos="zoom-in" data-aos-delay="400">
+        <a href="#dashboard" class="mega-btn-primary group relative overflow-hidden">
+          <span class="relative z-10 flex items-center gap-2 text-xl">
+            <span class="text-2xl">👁️</span> VIEW AI DASHBOARD
+            <span class="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+          </span>
+        </a>
+        <a href="#features" class="mega-btn-secondary group relative overflow-hidden">
+          <span class="relative z-10 flex items-center gap-2 text-xl">
+            <span class="text-2xl">🚀</span> EXPLORE FEATURES
+            <span class="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+          </span>
+        </a>
+      </div>
+      
+      <!-- AI Stats Ticker -->
+      <div class="ai-stats-ticker mt-16 py-6 bg-dark-light/50 backdrop-blur-md rounded-xl border border-primary/30 shadow-glow" data-aos="fade-up" data-aos-delay="500">
+        <div class="ticker-content flex flex-wrap md:flex-nowrap items-center justify-around gap-6 px-4">
+          <div class="ticker-item">
+            <div class="text-4xl font-bold gradient-text animate-pulse-subtle">87%</div>
+            <div class="text-sm text-white">of content missed by AI</div>
+          </div>
+          <div class="ticker-divider hidden md:block h-12 w-px bg-gradient-to-b from-transparent via-primary-light to-transparent"></div>
+          <div class="ticker-item">
+            <div class="text-4xl font-bold gradient-text animate-pulse-subtle">5.2x</div>
+            <div class="text-sm text-white">AI visibility increase</div>
+          </div>
+          <div class="ticker-divider hidden md:block h-12 w-px bg-gradient-to-b from-transparent via-primary-light to-transparent"></div>
+          <div class="ticker-item">
+            <div class="text-4xl font-bold gradient-text animate-pulse-subtle">24/7</div>
+            <div class="text-sm text-white">real-time monitoring</div>
+          </div>
+          <div class="ticker-divider hidden md:block h-12 w-px bg-gradient-to-b from-transparent via-primary-light to-transparent"></div>
+          <div class="ticker-item">
+            <div class="text-4xl font-bold gradient-text animate-pulse-subtle">3,500+</div>
+            <div class="text-sm text-white">websites optimized</div>
+          </div>
+        </div>
+      </div>
+      
+
+      
+      <!-- Scroll Indicator -->
+      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div class="flex flex-col items-center text-white/70">
+          <span class="text-sm mb-2">Scroll to Explore</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- AI Tracking Dashboard Section -->
+  <section id="dashboard" class="py-20 px-6 relative">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold mb-6" data-aos="fade-up">Weekly <span class="gradient-text">AI Bot Activity</span> Reports</h2>
+        <p class="text-xl text-gray-light max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+          Our AI Tracker provides comprehensive weekly reports showing exactly how AI bots interact with your website.
+        </p>
+      </div>
+      
+      <!-- AI Dashboard Demo -->
+      <div class="flex flex-col lg:flex-row gap-8 mt-16">
+        <!-- Left Side: Dashboard Preview -->
+        <div class="lg:w-3/5" data-aos="fade-right">
+          <div class="bg-[#111827] p-6 rounded-xl border border-primary/30 shadow-glow overflow-hidden">
+            <h3 class="text-2xl font-bold text-primary-light mb-6">AI Bot Activity</h3>
+            
+            <!-- Key Metrics -->
+            <div class="grid grid-cols-2 gap-4 mb-8">
+              <div class="bg-[#1a2235] p-4 rounded-lg border border-blue-500/20">
+                <div class="text-blue-400 text-4xl font-bold mb-1">342</div>
+                <div class="text-xs uppercase tracking-wider text-blue-300">TOTAL BOT VISITS</div>
+                <div class="text-xs text-blue-300/60 mt-1">+15% from last week</div>
+              </div>
+              <div class="bg-[#1a2235] p-4 rounded-lg border border-blue-500/20">
+                <div class="text-blue-400 text-4xl font-bold mb-1">8</div>
+                <div class="text-xs uppercase tracking-wider text-blue-300">PAGES VISITED</div>
+              </div>
+            </div>
+            
+            <!-- Top AI Crawlers -->
+            <div class="mb-8">
+              <h4 class="text-blue-400 text-lg font-semibold mb-3">Top AI Crawlers</h4>
+              <div class="bg-[#1a2235] rounded-lg overflow-hidden">
+                <table class="w-full text-sm">
+                  <thead>
+                    <tr class="border-b border-blue-500/20">
+                      <th class="text-left p-3 text-blue-300">AI Bot</th>
+                      <th class="text-center p-3 text-blue-300">Visits</th>
+                      <th class="text-center p-3 text-blue-300">Pages/Visit</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="border-b border-blue-500/10">
+                      <td class="p-3 text-white">AI Bot</td>
+                      <td class="p-3 text-center text-white">124</td>
+                      <td class="p-3 text-center text-white">3</td>
+                    </tr>
+                    <tr class="border-b border-blue-500/10">
+                      <td class="p-3 text-white">GoogleBot</td>
+                      <td class="p-3 text-center text-white">86</td>
+                      <td class="p-3 text-center text-white">4</td>
+                    </tr>
+                    <tr class="border-b border-blue-500/10">
+                      <td class="p-3 text-white">BingBot</td>
+                      <td class="p-3 text-center text-white">67</td>
+                      <td class="p-3 text-center text-white">2.3</td>
+                    </tr>
+                    <tr>
+                      <td class="p-3 text-white">ChatGPTLinker</td>
+                      <td class="p-3 text-center text-white">65</td>
+                      <td class="p-3 text-center text-white">4.8</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            
+            <!-- Most Visited Pages -->
+            <div class="mb-8">
+              <h4 class="text-blue-400 text-lg font-semibold mb-3">Most Visited Pages</h4>
+              <div class="bg-[#1a2235] rounded-lg overflow-hidden">
+                <table class="w-full text-sm">
+                  <thead>
+                    <tr class="border-b border-blue-500/20">
+                      <th class="text-left p-3 text-blue-300">Page</th>
+                      <th class="text-center p-3 text-blue-300">Bot Visits</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="border-b border-blue-500/10">
+                      <td class="p-3 text-white">Homepage</td>
+                      <td class="p-3 text-center text-white">145</td>
+                    </tr>
+                    <tr class="border-b border-blue-500/10">
+                      <td class="p-3 text-white">About</td>
+                      <td class="p-3 text-center text-white">87</td>
+                    </tr>
+                    <tr>
+                      <td class="p-3 text-white">Services</td>
+                      <td class="p-3 text-center text-white">78</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            
+            <!-- Content Type Engagement -->
+            <div class="mb-8">
+              <h4 class="text-blue-400 text-lg font-semibold mb-3">Content Type Engagement</h4>
+              <div class="bg-[#1a2235] rounded-lg overflow-hidden">
+                <table class="w-full text-sm">
+                  <thead>
+                    <tr class="border-b border-blue-500/20">
+                      <th class="text-left p-3 text-blue-300">Content Type</th>
+                      <th class="text-center p-3 text-blue-300">Engagement Level</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="border-b border-blue-500/10">
+                      <td class="p-3 text-white">Text Content</td>
+                      <td class="p-3 text-center text-white">72%</td>
+                    </tr>
+                    <tr class="border-b border-blue-500/10">
+                      <td class="p-3 text-white">Images</td>
+                      <td class="p-3 text-center text-white">54%</td>
+                    </tr>
+                    <tr>
+                      <td class="p-3 text-white">Videos</td>
+                      <td class="p-3 text-center text-white">38%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            
+            <!-- AI Crawler Path Analysis -->
+            <div>
+              <h4 class="text-blue-400 text-lg font-semibold mb-3">AI Crawler Path Analysis</h4>
+              <div class="bg-[#1a2235] rounded-lg overflow-hidden">
+                <table class="w-full text-sm">
+                  <thead>
+                    <tr class="border-b border-blue-500/20">
+                      <th class="text-left p-3 text-blue-300">Common Paths</th>
+                      <th class="text-center p-3 text-blue-300">Frequency</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="border-b border-blue-500/10">
+                      <td class="p-3 text-white">Homepage → About → Services</td>
+                      <td class="p-3 text-center text-white">32 times</td>
+                    </tr>
+                    <tr>
+                      <td class="p-3 text-white">Homepage → Blog → Products</td>
+                      <td class="p-3 text-center text-white">28 times</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Right Side: Explanation -->
+        <div class="lg:w-2/5" data-aos="fade-left">
+          <div class="bg-dark-light p-8 rounded-xl border border-primary/30 h-full flex flex-col justify-between">
+            <div>
+              <h3 class="text-2xl font-bold mb-6 gradient-text">Weekly AI Insights Delivered</h3>
+              <p class="text-gray-light mb-6">Every week, our AI Tracker monitors and analyzes how AI bots interact with your website, providing valuable insights:</p>
+              
+              <ul class="space-y-4 mb-8">
+                <li class="flex items-start gap-3">
+                  <div class="text-primary-light text-xl mt-1"><i class="fas fa-robot"></i></div>
+                  <div>
+                    <span class="font-bold text-white">Bot Identification:</span>
+                    <span class="text-gray-light"> Know exactly which AI systems are visiting your site and how often.</span>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="text-primary-light text-xl mt-1"><i class="fas fa-route"></i></div>
+                  <div>
+                    <span class="font-bold text-white">Crawler Paths:</span>
+                    <span class="text-gray-light"> See the exact routes AI bots take through your website.</span>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="text-primary-light text-xl mt-1"><i class="fas fa-file-alt"></i></div>
+                  <div>
+                    <span class="font-bold text-white">Content Engagement:</span>
+                    <span class="text-gray-light"> Understand which content types AI bots engage with most.</span>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="text-primary-light text-xl mt-1"><i class="fas fa-chart-line"></i></div>
+                  <div>
+                    <span class="font-bold text-white">Performance Trends:</span>
+                    <span class="text-gray-light"> Track changes in AI visibility over time with week-to-week comparisons.</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <a href="#pricing" class="block text-center bg-gradient-to-r from-primary to-secondary text-white px-6 py-4 rounded-lg font-bold hover:shadow-lg hover:shadow-primary/50 transition transform hover:scale-105">Get Weekly AI Reports</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- How It Works Section -->
+  <section id="how-it-works" class="py-20 px-6 relative">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold mb-6" data-aos="fade-up">How <span class="gradient-text">AHP Mod 2.0</span> Works</h2>
+        <p class="text-xl text-gray-light max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+          Our free AI visibility solution helps your website become fully visible to AI systems
+        </p>
+      </div>
+      
+      <!-- How It Works Steps -->
+      <div class="flex flex-col gap-16 mb-16">
+        <!-- Step 1: Free AHP Mod Installation -->
+        <div class="flex flex-col lg:flex-row gap-8 items-center" data-aos="fade-up">
+          <div class="lg:w-1/2 relative">
+            <div class="absolute -left-4 -top-4 w-12 h-12 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center text-2xl font-bold">1</div>
+            <div class="bg-dark-light p-8 rounded-xl border border-primary/30 shadow-glow h-full">
+              <h3 class="text-2xl font-bold mb-4 text-primary-light">Free AHP Mod Installation</h3>
+              <p class="text-gray-light mb-6">The AHP Mod 2.0 is completely <span class="text-white font-bold">free to install</span> on your website. This lightweight module works behind the scenes to make your content fully visible to AI systems.</p>
+              <ul class="space-y-3 mb-8">
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check text-secondary mt-1"></i>
+                  <span>Simple one-click installation</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check text-secondary mt-1"></i>
+                  <span>Zero impact on site performance</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check text-secondary mt-1"></i>
+                  <span>Works with all major CMS platforms</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check text-secondary mt-1"></i>
+                  <span>Immediate AI visibility improvement</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="lg:w-1/2">
+            <div class="bg-dark p-6 rounded-xl border border-primary/20 relative overflow-hidden">
+              <div class="absolute top-0 right-0 bg-primary/20 text-primary-light text-xs font-bold px-3 py-1 rounded-bl-lg">FREE</div>
+              <div class="flex justify-center mb-6">
+                <div class="w-32 h-32 rounded-full bg-primary/10 flex items-center justify-center">
+                  <i class="fas fa-robot text-5xl text-primary-light"></i>
+                </div>
+              </div>
+              <div class="text-center">
+                <h4 class="text-xl font-bold mb-3">AHP Mod 2.0</h4>
+                <p class="text-gray-light mb-6">Our core AI visibility module that bridges the gap between your content and AI systems.</p>
+                <a href="#signup" class="inline-block bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-lg font-bold hover:shadow-lg hover:shadow-primary/50 transition transform hover:scale-105">Install Free</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Step 2: Weekly AI Analysis -->
+        <div class="flex flex-col lg:flex-row-reverse gap-8 items-center" data-aos="fade-up">
+          <div class="lg:w-1/2 relative">
+            <div class="absolute -left-4 -top-4 w-12 h-12 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center text-2xl font-bold">2</div>
+            <div class="bg-dark-light p-8 rounded-xl border border-primary/30 shadow-glow h-full">
+              <h3 class="text-2xl font-bold mb-4 text-primary-light">Free Weekly AI Analysis</h3>
+              <p class="text-gray-light mb-6">Every week, you'll receive a <span class="text-white font-bold">comprehensive free report</span> showing exactly how AI systems are interacting with your website.</p>
+              <ul class="space-y-3 mb-8">
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check text-secondary mt-1"></i>
+                  <span>AI bot identification and tracking</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check text-secondary mt-1"></i>
+                  <span>Content visibility scoring</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check text-secondary mt-1"></i>
+                  <span>AI crawler path mapping</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check text-secondary mt-1"></i>
+                  <span>Performance trend analysis</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="lg:w-1/2">
+            <div class="bg-[#111827] p-6 rounded-xl border border-primary/20 overflow-hidden">
+              <div class="flex items-center justify-between mb-4">
+                <h4 class="text-xl font-bold">Weekly AI Report</h4>
+                <span class="text-xs bg-primary/20 text-primary-light px-3 py-1 rounded-full">FREE</span>
+              </div>
+              <div class="bg-[#1a2235] p-4 rounded-lg border border-blue-500/20 mb-4">
+                <div class="flex justify-between items-center mb-2">
+                  <span class="text-sm text-blue-300">AI Bot Visits</span>
+                  <span class="text-blue-400 font-bold">342</span>
+                </div>
+                <div class="w-full bg-dark/50 h-2 rounded-full overflow-hidden">
+                  <div class="bg-gradient-to-r from-primary to-secondary h-full rounded-full" style="width: 75%"></div>
+                </div>
+                <div class="text-xs text-blue-300/60 mt-1">+15% from last week</div>
+              </div>
+              <div class="grid grid-cols-2 gap-3 mb-4">
+                <div class="bg-[#1a2235] p-3 rounded-lg border border-blue-500/20">
+                  <div class="text-sm text-blue-300 mb-1">Content Score</div>
+                  <div class="text-blue-400 text-xl font-bold">87<span class="text-sm">/100</span></div>
+                </div>
+                <div class="bg-[#1a2235] p-3 rounded-lg border border-blue-500/20">
+                  <div class="text-sm text-blue-300 mb-1">Pages Indexed</div>
+                  <div class="text-blue-400 text-xl font-bold">8<span class="text-sm">/10</span></div>
+                </div>
+              </div>
+              <div class="text-center mt-6">
+                <a href="#signup" class="inline-block bg-dark border border-primary text-white px-6 py-3 rounded-lg font-bold hover:bg-primary/10 transition">Get Weekly Reports</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Step 3: Custom Solutions -->
+        <div class="flex flex-col lg:flex-row gap-8 items-center" data-aos="fade-up">
+          <div class="lg:w-1/2 relative">
+            <div class="absolute -left-4 -top-4 w-12 h-12 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center text-2xl font-bold">3</div>
+            <div class="bg-dark-light p-8 rounded-xl border border-primary/30 shadow-glow h-full">
+              <h3 class="text-2xl font-bold mb-4 text-primary-light">Optional Enhancement Solutions</h3>
+              <p class="text-gray-light mb-6">Based on your weekly analysis, you'll receive <span class="text-white font-bold">personalized recommendations</span> for improving your AI visibility. Choose which enhancements you want to implement.</p>
+              <ul class="space-y-3 mb-8">
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check text-secondary mt-1"></i>
+                  <span>Schema.org markup implementation</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check text-secondary mt-1"></i>
+                  <span>Metadata optimization</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check text-secondary mt-1"></i>
+                  <span>Content structure enhancement</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-check text-secondary mt-1"></i>
+                  <span>AI bot communication protocol</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="lg:w-1/2">
+            <div class="bg-dark p-6 rounded-xl border border-primary/20">
+              <div class="text-center mb-6">
+                <div class="inline-block p-4 rounded-full bg-primary/10 mb-4">
+                  <i class="fas fa-magic text-4xl text-primary-light"></i>
+                </div>
+                <h4 class="text-xl font-bold mb-2">Personalized Recommendations</h4>
+                <p class="text-gray-light text-sm">Your weekly report will include specific recommendations tailored to your website's needs.</p>
+              </div>
+              <div class="bg-[#1a2235] p-4 rounded-lg border border-blue-500/20 mb-4">
+                <div class="flex items-start gap-3">
+                  <div class="bg-primary/20 p-2 rounded-lg">
+                    <i class="fas fa-code text-primary-light"></i>
+                  </div>
+                  <div>
+                    <h5 class="font-bold text-sm">Schema Markup Enhancement</h5>
+                    <p class="text-xs text-gray-light">Implement structured data to improve AI understanding</p>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-[#1a2235] p-4 rounded-lg border border-blue-500/20">
+                <div class="flex items-start gap-3">
+                  <div class="bg-primary/20 p-2 rounded-lg">
+                    <i class="fas fa-tags text-primary-light"></i>
+                  </div>
+                  <div>
+                    <h5 class="font-bold text-sm">Metadata Optimization</h5>
+                    <p class="text-xs text-gray-light">Enhance metadata for better AI crawling and indexing</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Testimonials & Social Proof -->
+      <div class="mb-16" data-aos="fade-up">
+        <h3 class="text-2xl font-bold mb-8 text-center">What Our Users Are <span class="gradient-text">Saying</span></h3>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <div class="bg-dark p-6 rounded-xl border border-primary/20 transform transition-all hover:scale-105 relative">
+            <div class="absolute -top-5 -left-2">
+              <i class="fas fa-quote-left text-4xl text-primary/30"></i>
+            </div>
+            <div class="pt-4">
+              <p class="text-gray-light italic mb-6">"After installing the free AHP Mod, our website's visibility to AI systems improved dramatically. The weekly reports showed us exactly what needed fixing."</p>
+              <div class="flex items-center">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center text-sm font-bold mr-3">JD</div>
+                <div>
+                  <h4 class="font-bold text-sm">James Donovan</h4>
+                  <p class="text-xs text-gray-light">Marketing Director, TechFlow</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Testimonial 2 -->
+          <div class="bg-dark p-6 rounded-xl border border-primary/20 transform transition-all hover:scale-105 relative">
+            <div class="absolute -top-5 -left-2">
+              <i class="fas fa-quote-left text-4xl text-primary/30"></i>
+            </div>
+            <div class="pt-4">
+              <p class="text-gray-light italic mb-6">"The free weekly analysis helped us understand why AI systems weren't properly indexing our content. The insights were invaluable."</p>
+              <div class="flex items-center">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center text-sm font-bold mr-3">SL</div>
+                <div>
+                  <h4 class="font-bold text-sm">Sarah Lin</h4>
+                  <p class="text-xs text-gray-light">SEO Specialist, GrowthHub</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Testimonial 3 -->
+          <div class="bg-dark p-6 rounded-xl border border-primary/20 transform transition-all hover:scale-105 relative">
+            <div class="absolute -top-5 -left-2">
+              <i class="fas fa-quote-left text-4xl text-primary/30"></i>
+            </div>
+            <div class="pt-4">
+              <p class="text-gray-light italic mb-6">"I was skeptical at first, but the free AHP Mod installation was simple and the weekly reports showed immediate improvements in our AI visibility."</p>
+              <div class="flex items-center">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center text-sm font-bold mr-3">MR</div>
+                <div>
+                  <h4 class="font-bold text-sm">Michael Rodriguez</h4>
+                  <p class="text-xs text-gray-light">Founder, Nexus Digital</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Call to Action -->
+      <div class="text-center" data-aos="fade-up">
+        <div class="bg-dark-light/50 backdrop-blur-md p-8 rounded-xl border border-primary/30 max-w-3xl mx-auto">
+          <h3 class="text-2xl font-bold mb-4">Ready to Make Your Website <span class="gradient-text">Visible to AI</span>?</h3>
+          <p class="text-gray-light mb-8">Get started with the free AHP Mod 2.0 installation and weekly AI visibility reports today.</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="#signup" class="bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-lg font-bold hover:shadow-lg hover:shadow-primary/50 transition transform hover:scale-105">Install Free AHP Mod</a>
+            <a href="#dashboard" class="bg-dark border border-primary text-white px-8 py-4 rounded-lg font-bold hover:bg-primary/10 transition">View Sample Reports</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Features Section -->
+  <section id="features" class="py-20 px-6 bg-dark-light/50">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold mb-6" data-aos="fade-up">Powerful <span class="gradient-text">AI Tracking</span> Features</h2>
+        <p class="text-xl text-gray-light max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">AHP Mod 2.0 gives you unprecedented visibility into how AI bots interact with your website.</p>
+      </div>
+      
+      <!-- Feature Cards -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="feature-card bg-dark p-8 rounded-xl" data-aos="fade-up">
+          <div class="text-primary-light text-4xl mb-6"><i class="fas fa-robot"></i></div>
+          <h3 class="text-2xl font-bold mb-4">AI Bot Identification</h3>
+          <p class="text-gray-light mb-4">Detect and identify AI crawlers from major platforms like ChatGPT, Claude, Bard, and more.</p>
+          <ul class="text-gray-light space-y-2">
+            <li class="flex items-start gap-2">
+              <i class="fas fa-check text-secondary mt-1"></i>
+              <span>Real-time crawler detection</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fas fa-check text-secondary mt-1"></i>
+              <span>Bot fingerprinting technology</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fas fa-check text-secondary mt-1"></i>
+              <span>Spoofing detection alerts</span>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Feature 2 -->
+        <div class="feature-card bg-dark p-8 rounded-xl" data-aos="fade-up" data-aos-delay="100">
+          <div class="text-primary-light text-4xl mb-6"><i class="fas fa-route"></i></div>
+          <h3 class="text-2xl font-bold mb-4">Crawl Path Mapping</h3>
+          <p class="text-gray-light mb-4">Track exactly how AI bots navigate through your website with visual path mapping.</p>
+          <ul class="text-gray-light space-y-2">
+            <li class="flex items-start gap-2">
+              <i class="fas fa-check text-secondary mt-1"></i>
+              <span>Entry and exit point tracking</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fas fa-check text-secondary mt-1"></i>
+              <span>Page sequence visualization</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fas fa-check text-secondary mt-1"></i>
+              <span>Time-on-page metrics</span>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Feature 3 -->
+        <div class="feature-card bg-dark p-8 rounded-xl" data-aos="fade-up" data-aos-delay="200">
+          <div class="text-primary-light text-4xl mb-6"><i class="fas fa-temperature-high"></i></div>
+          <h3 class="text-2xl font-bold mb-4">Content Heatmaps</h3>
+          <p class="text-gray-light mb-4">See which parts of your content AI bots pay the most attention to with detailed heatmaps.</p>
+          <ul class="text-gray-light space-y-2">
+            <li class="flex items-start gap-2">
+              <i class="fas fa-check text-secondary mt-1"></i>
+              <span>Content engagement scoring</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fas fa-check text-secondary mt-1"></i>
+              <span>Schema markup visibility</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fas fa-check text-secondary mt-1"></i>
+              <span>Metadata effectiveness rating</span>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Feature 4 -->
+        <div class="feature-card bg-dark p-8 rounded-xl" data-aos="fade-up">
+          <div class="text-primary-light text-4xl mb-6"><i class="fas fa-chart-bar"></i></div>
+          <h3 class="text-2xl font-bold mb-4">AI Analytics Dashboard</h3>
+          <p class="text-gray-light mb-4">Comprehensive analytics dashboard with actionable insights about AI bot activity.</p>
+          <ul class="text-gray-light space-y-2">
+            <li class="flex items-start gap-2">
+              <i class="fas fa-check text-secondary mt-1"></i>
+              <span>Crawl frequency patterns</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fas fa-check text-secondary mt-1"></i>
+              <span>Bot traffic trends</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fas fa-check text-secondary mt-1"></i>
+              <span>Content performance metrics</span>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Feature 5 -->
+        <div class="feature-card bg-dark p-8 rounded-xl" data-aos="fade-up" data-aos-delay="100">
+          <div class="text-primary-light text-4xl mb-6"><i class="fas fa-bell"></i></div>
+          <h3 class="text-2xl font-bold mb-4">Real-Time Alerts</h3>
+          <p class="text-gray-light mb-4">Get instant notifications about important AI crawler activity on your website.</p>
+          <ul class="text-gray-light space-y-2">
+            <li class="flex items-start gap-2">
+              <i class="fas fa-check text-secondary mt-1"></i>
+              <span>New AI bot detection</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fas fa-check text-secondary mt-1"></i>
+              <span>Unusual crawl pattern alerts</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fas fa-check text-secondary mt-1"></i>
+              <span>Content visibility issues</span>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Feature 6 -->
+        <div class="feature-card bg-dark p-8 rounded-xl" data-aos="fade-up" data-aos-delay="200">
+          <div class="text-primary-light text-4xl mb-6"><i class="fas fa-tools"></i></div>
+          <h3 class="text-2xl font-bold mb-4">Optimization Tools</h3>
+          <p class="text-gray-light mb-4">Powerful tools to improve your website's visibility to AI crawlers and bots.</p>
+          <ul class="text-gray-light space-y-2">
+            <li class="flex items-start gap-2">
+              <i class="fas fa-check text-secondary mt-1"></i>
+              <span>Schema markup generator</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fas fa-check text-secondary mt-1"></i>
+              <span>AI content optimizer</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fas fa-check text-secondary mt-1"></i>
+              <span>Metadata enhancement tools</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  
+  <!-- Call to Action -->
+  <section id="signup" class="py-24 px-6 relative overflow-hidden">
+    <div class="animated-bg absolute inset-0 opacity-70"></div>
+    
+    <div class="max-w-4xl mx-auto relative z-10 text-center">
+      <h2 class="text-4xl md:text-5xl font-bold mb-8" data-aos="fade-up">Start Tracking AI Bots Today</h2>
+      <p class="text-xl text-gray-light mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">Join 100+ forward-thinking companies already using AHP Mod 2.0 to optimize their AI visibility.</p>
+      
+      <form class="max-w-lg mx-auto" data-aos="fade-up" data-aos-delay="200">
+        <div class="flex flex-col md:flex-row gap-4 mb-8">
+          <input type="email" placeholder="Enter your email" class="flex-1 bg-dark-light border border-primary/30 text-white px-6 py-4 rounded-lg focus:outline-none focus:border-primary">
+          <button type="submit" class="bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-lg font-bold hover:shadow-lg hover:shadow-primary/30 transition">Get Started</button>
+        </div>
+        <p class="text-sm text-gray-light">No credit card required. Start with a 14-day free trial.</p>
+      </form>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="bg-dark py-16 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid md:grid-cols-4 gap-12">
+        <div>
+          <div class="font-bold text-xl text-primary-light mb-6">AHP <span class="gradient-text">MOD 2.0</span></div>
+          <p class="text-gray-light mb-6">The world's first AI visibility protocol that shows you what AI bots see on your website.</p>
+          <div class="flex gap-4">
+            <a href="#" class="text-gray-light hover:text-primary-light transition"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-gray-light hover:text-primary-light transition"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="text-gray-light hover:text-primary-light transition"><i class="fab fa-facebook"></i></a>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-bold mb-6">Product</h4>
+          <ul class="space-y-3">
+            <li><a href="#features" class="text-gray-light hover:text-white transition">Features</a></li>
+            <li><a href="#pricing" class="text-gray-light hover:text-white transition">Pricing</a></li>
+            <li><a href="#" class="text-gray-light hover:text-white transition">API</a></li>
+            <li><a href="#" class="text-gray-light hover:text-white transition">Integrations</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-bold mb-6">Resources</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-gray-light hover:text-white transition">Documentation</a></li>
+            <li><a href="#" class="text-gray-light hover:text-white transition">Blog</a></li>
+            <li><a href="#" class="text-gray-light hover:text-white transition">Case Studies</a></li>
+            <li><a href="#" class="text-gray-light hover:text-white transition">Support</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-bold mb-6">Company</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-gray-light hover:text-white transition">About</a></li>
+            <li><a href="#" class="text-gray-light hover:text-white transition">Careers</a></li>
+            <li><a href="#" class="text-gray-light hover:text-white transition">Privacy Policy</a></li>
+            <li><a href="#" class="text-gray-light hover:text-white transition">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-dark/50 mt-12 pt-8 text-center text-sm text-gray">
+        <p>© 2025 AI Handshake Protocol | Powered by AHP Mod 2.0</p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Sticky CTA Button -->
+  <div class="sticky-cta">
+    <a href="#signup" class="bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-full shadow-lg hover:shadow-primary/50 transition">🚀 Start Tracking AI</a>
+  </div>
+
+  <!-- AOS Init -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
+
+  <!-- Typed Headline Text -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    new Typed('#typed', {
+      strings: ['AI Visibility Protocol', 'ChatGPT Detection Engine', 'Real-Time Bot Tracker'],
+      typeSpeed: 40,
+      backSpeed: 20,
+      loop: true
+    });
+  </script>
+  
+  <!-- Human vs AI View Toggle Script -->
+  <script>
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      // Typed.js has been replaced with static tagline
+      
+      // Initialize AOS animations
+      AOS.init({
+        duration: 800,
+        once: false,
+        mirror: true
+      });
+    });
+  </script>
+  
+  <style>
+    /* Static tagline styling */
+    .static-tagline {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem 0;
+    }
+    
+    .static-tagline span {
+      display: inline-block;
+      padding: 0.5rem 1.5rem;
+      border-radius: 8px;
+      background: rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(138, 75, 255, 0.3);
+      box-shadow: 0 4px 20px rgba(138, 75, 255, 0.2);
+      letter-spacing: 0.5px;
+    }
+    
+    /* Additional dynamic effects */
+    .flash-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(16, 185, 129, 0.2);
+      z-index: 9999;
+      pointer-events: none;
+      animation: flash 0.3s ease-out;
+    }
+    
+    @keyframes flash {
+      0% { opacity: 0; }
+      50% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+    
+    .ai-mode .view-container {
+      transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    }
+    
+    /* Animate the AI-visible content */
+    .ai-mode .ai-visible {
+      animation: highlight-pulse 2s infinite;
+    }
+    
+    @keyframes highlight-pulse {
+      0%, 100% { box-shadow: 0 0 5px rgba(16, 185, 129, 0.5); }
+      50% { box-shadow: 0 0 15px rgba(16, 185, 129, 0.8); }
+    }
+  </style>
+</body>
+</html>
